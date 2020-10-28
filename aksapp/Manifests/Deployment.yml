@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azdo-deployment
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: azdo-podlabel
+  template:
+    metadata:
+      labels:
+        app: azdo-podlabel
+    spec:
+      containers:
+      - name: azdo-container
+        image: acrhackfestjim11437.azurecr.io/pink:remote-v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
