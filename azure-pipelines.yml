@@ -8,7 +8,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '5803aa69-928e-474d-b487-e291174877bf'
-  imageRepository: 'pink:remote-v2'
+  imageRepository: 'pink'
   containerRegistry: 'acrhackfestjim11437.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
