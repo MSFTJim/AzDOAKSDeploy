@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: pinkremotev2 
+  name: pink-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pinkremotev2
+      app: pink-podlabel
   template:
     metadata:
       labels:
-        app: pinkremotev2 
+        app: pink-podlabel
     spec:
       containers:
-        - name: pinkremotev2 
-          image: acrhackfestjim11437.azurecr.io/pinkremotev2
+        - name: pink
+          image: acrhackfestjim11437.azurecr.io/pink:remote-v2
           ports:
           - containerPort: 80
