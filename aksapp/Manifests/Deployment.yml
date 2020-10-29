@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: azdo-container
-        image: acrhackfestjim11437.azurecr.io/pink:remote-v1
+        image: acrhackfestjim11437.azurecr.io/pink:remote-v2
         resources:
           limits:
             memory: "128Mi"
