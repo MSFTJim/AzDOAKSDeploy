@@ -50,8 +50,8 @@ stages:
     pool:
       vmImage: $(vmImageName)
     environment: 'MSFTJimazdd1.default'
-    strategy:
-      rolling:        
+    strategy: 
+     rolling:        
         deploy:
           steps:              
           - task: KubernetesManifest@0
