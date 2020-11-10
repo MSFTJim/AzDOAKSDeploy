@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: brown 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: brown
+  template:
+    metadata:
+      labels:
+        app: brown 
+    spec:
+      containers:
+        - name: brown 
+          image: acrhackfestjim11437.azurecr.io/brown
+          ports:
+          - containerPort: 80
